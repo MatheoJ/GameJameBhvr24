@@ -240,8 +240,11 @@ MonoBehaviour:
   foodList:
   - {fileID: 1990583758134529056, guid: 563454176a25e984797d003963bf48c0, type: 3}
   - {fileID: 1990583758134529056, guid: 51ebbb58d0782bd4fa6cb72fe9149a7f, type: 3}
+  - {fileID: 1990583758134529056, guid: ca0761dc58ce7a4469a2b59e2c72f192, type: 3}
   foodSpeed: 30
   foodNumberUnlocked: 2
+  animatorhand: {fileID: 5866666021909216657, guid: 52fc013a45fe126419d1bd2fa08c46f3,
+    type: 3}
 --- !u!1 &8704533980398014780
 GameObject:
   m_ObjectHideFlags: 0
