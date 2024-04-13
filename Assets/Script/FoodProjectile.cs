@@ -13,6 +13,12 @@ public class FoodProjectile : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Player Hit");
+            return;
+        }
+        Debug.Log("Hit: " + collision.gameObject.tag);
         Destroy(gameObject);
     }
 }

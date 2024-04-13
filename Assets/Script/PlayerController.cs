@@ -13,7 +13,10 @@ public class FPSController : MonoBehaviour
 
 
     public float lookSpeed = 2f;
-    public float lookXLimit = 45f;
+    public float lookXLimit = 60f;
+
+    public int maxJump = 2;
+    private int jumpNumber = 0;
 
 
     Vector3 moveDirection = Vector3.zero;
@@ -47,9 +50,15 @@ public class FPSController : MonoBehaviour
         #endregion
 
         #region Handles Jumping
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (Input.GetButtonDown("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+            jumpNumber =1;
+        } else if (Input.GetButtonDown("Jump") && canMove && jumpNumber < maxJump)
+        {
+            Debug.Log("Jumping");
+            moveDirection.y = jumpPower;
+            jumpNumber ++;
         }
         else
         {
@@ -69,6 +78,7 @@ public class FPSController : MonoBehaviour
         if (canMove)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
