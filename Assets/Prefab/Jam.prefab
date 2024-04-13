@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2231306161050148573}
   m_Layer: 0
   m_Name: Jam
-  m_TagString: Food
+  m_TagString: Jam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

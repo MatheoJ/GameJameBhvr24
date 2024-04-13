@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum WazoType
+{
+    Bacon,Fromage,Jam
+}
+
 public class WAZO : MonoBehaviour
 {
     public float alertDuration = 10f;
     private float alertTimer=0;
     public int alertSpeedMultiplicator = 2;
+    public WazoType wazoType= WazoType.Bacon;
 
     private NavMeshAgent agent;
     public float maxTime=30.0f;
@@ -21,15 +27,23 @@ public class WAZO : MonoBehaviour
 
     public float startingSpeed=7;
 
+    public Material Bacon;
+    public Material Jam;
+    public Material Fromage;
+    private MeshRenderer renderer;
+
     // Start is called before the first frame update
     void Start()
     {
+        renderer= GetComponent<MeshRenderer>();
+        SetColor();
         agent = GetComponent<NavMeshAgent>();
         manager = FindAnyObjectByType<WAZOManager>();
         manager.Enregistrement(this);
         agent.speed = startingSpeed;
         agent.acceleration = startingSpeed*startingSpeed;
         agent.angularSpeed = startingSpeed*100;
+
     }
 
     // Update is called once per frame
@@ -69,11 +83,17 @@ public class WAZO : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Food")
+        if (!other.gameObject.CompareTag(ConvertEnum(wazoType)))
         {
             SetNewDestination();
             Alert();
             manager.Hit(this);
+        }
+        else
+        {
+            manager.Hit(this);
+            Destroy(this.gameObject);
+            
         }
     }
 
@@ -102,10 +122,44 @@ public class WAZO : MonoBehaviour
             agent.angularSpeed *= alertSpeedMultiplicator * alertSpeedMultiplicator;
             isAlerted = true;
         }
+        alertTimer = alertDuration;
+
     }
 
     private void OnDestroy()
     {
         manager.Desinscirption(this);
+    }
+
+    private string ConvertEnum(WazoType type)
+    {
+        switch(type)
+        {
+            case WazoType.Bacon:
+                return "Bacon";
+            case WazoType.Jam:
+                return "Jam";
+            case WazoType.Fromage:
+                return "Fromage";
+            default:
+                return "";
+        }
+    }
+
+    private void SetColor()
+    {
+        switch (wazoType)
+        {
+            case WazoType.Bacon:
+                renderer.material = Bacon;
+                break;
+            case WazoType.Jam:
+                renderer.material = Jam;
+                break;
+            case WazoType.Fromage:
+                renderer.material = Fromage;
+                break;
+
+        }
     }
 }

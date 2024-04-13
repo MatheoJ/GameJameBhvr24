@@ -173,11 +173,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alertDuration: 10
-  alertTimer: 0
   alertSpeedMultiplicator: 2
+  wazoType: 0
   maxTime: 30
   minDistance: 1
   range: 10
+  isAlerted: 0
+  startingSpeed: 7
+  Bacon: {fileID: 2100000, guid: 9bc25b782052153438576219de5d96b1, type: 2}
+  Jam: {fileID: 2100000, guid: fd3772ffe7bb6cd4db4353198125ea7d, type: 2}
+  Fromage: {fileID: 2100000, guid: 5fe3c8cd770fa054ba89b6f9e956a8be, type: 2}
 --- !u!114 &3877926797423628393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,5 +197,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0
   desiredVelocity: 0
-  path: 1
-  alertRange: 1
+  path: 0
+  alertRange: 0
