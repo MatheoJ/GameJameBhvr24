@@ -14,10 +14,8 @@ GameObject:
   - component: {fileID: 4457634731953191208}
   - component: {fileID: 88850743022859412}
   - component: {fileID: 8643973016834073158}
-  - component: {fileID: 6942585929374355733}
-  - component: {fileID: 3877926797423628393}
   m_Layer: 0
-  m_Name: WAZO
+  m_Name: PouletJam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,45 +158,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6942585929374355733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7354026698808801761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797784d3f4cc0f447ba3cb518ab1ff33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alertDuration: 10
-  alertSpeedMultiplicator: 2
-  wazoType: 0
-  maxTime: 30
-  minDistance: 1
-  range: 10
-  isAlerted: 0
-  startingSpeed: 7
-  Bacon: {fileID: 2100000, guid: 9bc25b782052153438576219de5d96b1, type: 2}
-  Jam: {fileID: 2100000, guid: fd3772ffe7bb6cd4db4353198125ea7d, type: 2}
-  Fromage: {fileID: 2100000, guid: 5fe3c8cd770fa054ba89b6f9e956a8be, type: 2}
-  PouletBackon: {fileID: 0}
-  PouletJam: {fileID: 0}
-  PouletFromage: {fileID: 0}
---- !u!114 &3877926797423628393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7354026698808801761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a7816358fca07d42bfeadf619fa8c22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 0
-  desiredVelocity: 0
-  path: 0
-  alertRange: 0

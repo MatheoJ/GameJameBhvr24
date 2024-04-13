@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3104689369284790819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2541208085003418845}
+  - component: {fileID: 3546373350566629604}
+  - component: {fileID: 1355202387664164689}
+  - component: {fileID: 7034188189645302932}
+  m_Layer: 0
+  m_Name: WAZO_Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2541208085003418845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104689369284790819}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.760172, y: 3.616, z: -2.0183897}
+  m_LocalScale: {x: 1, y: 0.62, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3546373350566629604
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104689369284790819}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1355202387664164689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104689369284790819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797784d3f4cc0f447ba3cb518ab1ff33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alertDuration: 10
+  alertSpeedMultiplicator: 2
+  wazoType: 0
+  wazoRace: 0
+  maxTime: 30
+  minDistance: 1
+  range: 10
+  isAlerted: 0
+  startingSpeed: 7
+  Bacon: {fileID: 2100000, guid: 9bc25b782052153438576219de5d96b1, type: 2}
+  Jam: {fileID: 2100000, guid: fd3772ffe7bb6cd4db4353198125ea7d, type: 2}
+  Fromage: {fileID: 2100000, guid: 5fe3c8cd770fa054ba89b6f9e956a8be, type: 2}
+  PouletBackon: {fileID: 919132149155446097, guid: 50b37aab9d80d064db07c9d90f997197,
+    type: 3}
+  PouletJam: {fileID: 919132149155446097, guid: 461ab58cb617c0a478f0d78d9bb1b773,
+    type: 3}
+  PouletFromage: {fileID: 919132149155446097, guid: d287a38770b9ba54a8e7aa811df0456c,
+    type: 3}
+  PigeonBackon: {fileID: 919132149155446097, guid: 50b37aab9d80d064db07c9d90f997197,
+    type: 3}
+  PigeonJam: {fileID: 919132149155446097, guid: 461ab58cb617c0a478f0d78d9bb1b773,
+    type: 3}
+  PigeonFromage: {fileID: 919132149155446097, guid: d287a38770b9ba54a8e7aa811df0456c,
+    type: 3}
+  SeagleBackon: {fileID: 919132149155446097, guid: 7c3fb61b3d0877b458756608b95bfd69,
+    type: 3}
+  SeagleJam: {fileID: 919132149155446097, guid: 6a477c6d4391b574db08ca8edf18fae4,
+    type: 3}
+  SeagleFromage: {fileID: 919132149155446097, guid: 5ea0278a3668b5443a3c7c7a6fdd7aeb,
+    type: 3}
+--- !u!195 &7034188189645302932
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104689369284790819}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

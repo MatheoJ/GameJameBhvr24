@@ -5,7 +5,12 @@ using UnityEngine.AI;
 
 public enum WazoType
 {
-    Bacon,Fromage,Jam
+    Bacon, Jam, Fromage
+}
+
+public enum WazoRace
+{
+    Poulet, Pigeon, Seagle
 }
 
 public class WAZO : MonoBehaviour
@@ -14,6 +19,7 @@ public class WAZO : MonoBehaviour
     private float alertTimer=0;
     public int alertSpeedMultiplicator = 2;
     public WazoType wazoType= WazoType.Bacon;
+    public WazoRace wazoRace = WazoRace.Poulet;
 
     private NavMeshAgent agent;
     public float maxTime=30.0f;
@@ -30,13 +36,24 @@ public class WAZO : MonoBehaviour
     public Material Bacon;
     public Material Jam;
     public Material Fromage;
-    private MeshRenderer renderer;
+
+    public GameObject PouletBackon;
+    public GameObject PouletJam;
+    public GameObject PouletFromage;
+
+    public GameObject PigeonBackon;
+    public GameObject PigeonJam;
+    public GameObject PigeonFromage;
+
+    public GameObject SeagleBackon;
+    public GameObject SeagleJam;
+    public GameObject SeagleFromage;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        renderer= GetComponent<MeshRenderer>();
-        SetColor();
         agent = GetComponent<NavMeshAgent>();
         manager = FindAnyObjectByType<WAZOManager>();
         manager.Enregistrement(this);
@@ -146,20 +163,59 @@ public class WAZO : MonoBehaviour
         }
     }
 
-    private void SetColor()
+    public void SetColor()
     {
+        Debug.Log("Setting color");
+        Debug.Log(wazoType);
+        Debug.Log(Bacon);
         switch (wazoType)
-        {
+        {            
             case WazoType.Bacon:
-                renderer.material = Bacon;
+                //rendererWazo.material = Bacon;
+                // instantiate the prefab pouletBacon as a child of the current object
+                if (wazoRace == WazoRace.Poulet)
+                {
+                    Instantiate(PouletBackon, transform);
+                }
+                else if (wazoRace == WazoRace.Pigeon)
+                {
+                    Instantiate(PigeonBackon, transform);
+                }
+                else if (wazoRace == WazoRace.Seagle)
+                {
+                    Instantiate(SeagleBackon, transform);
+                }              
                 break;
             case WazoType.Jam:
-                renderer.material = Jam;
+                //rendererWazo.material = Jam;
+                if (wazoRace == WazoRace.Poulet)
+                {
+                    Instantiate(PouletJam, transform);
+                }
+                else if (wazoRace == WazoRace.Pigeon)
+                {
+                    Instantiate(PigeonJam, transform);
+                }
+                else if (wazoRace == WazoRace.Seagle)
+                {
+                    Instantiate(SeagleJam, transform);
+                }
                 break;
             case WazoType.Fromage:
-                renderer.material = Fromage;
+                //rendererWazo.material = Fromage;
+                if (wazoRace == WazoRace.Poulet)
+                {
+                    Instantiate(PouletFromage, transform);
+                }
+                else if (wazoRace == WazoRace.Pigeon)
+                {
+                    Instantiate(PigeonFromage, transform);
+                }
+                else if (wazoRace == WazoRace.Seagle)
+                {
+                    Instantiate(SeagleFromage, transform);
+                }
                 break;
-
         }
     }
 }

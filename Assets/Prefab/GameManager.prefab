@@ -48,5 +48,7 @@ MonoBehaviour:
   waveNumber: 0
   foodLauncher: {fileID: 0}
   timeLeftForGame: 180
+  birdNumberInCurrentWave: 0
+  remainingBirdNumberInCurrentWave: 0
   BirdPrefabList:
-  - {fileID: 7354026698808801761, guid: e4078a5ea10dc6b4ea25701b952f8e4f, type: 3}
+  - {fileID: 3104689369284790819, guid: ab2460afb17d9bf449e290eb85474596, type: 3}
