@@ -10,15 +10,11 @@ public class FoodLauncher : MonoBehaviour
     public float foodSpeed = 10;
     public int foodNumberUnlocked = 2;
 
-<<<<<<< Updated upstream
-    private int chosenFoodIndex = 0;
-=======
     public Animator animatorhand;
     private bool isClick = false;
     private bool isTurnPage = false;
 
-    private int foodIndex = 0;
->>>>>>> Stashed changes
+    private int chosenFoodIndex = 0;
 
     void start()
     {
@@ -33,14 +29,10 @@ public class FoodLauncher : MonoBehaviour
         //if mouse down
         if (Input.GetMouseButtonDown(0))
         {
-<<<<<<< Updated upstream
             var bullet = Instantiate(foodList[chosenFoodIndex], foodSpawnPoint.position + foodSpawnPoint.forward*2, foodSpawnPoint.rotation);
-=======
+            bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
             isClick = true;
 
-            var bullet = Instantiate(foodList[foodIndex], foodSpawnPoint.position + foodSpawnPoint.forward*2, foodSpawnPoint.rotation);
->>>>>>> Stashed changes
-            bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
         }
         else
         {
@@ -51,14 +43,9 @@ public class FoodLauncher : MonoBehaviour
         //if mouse wheel is scrolled
         if (Input.mouseScrollDelta.y > 0)
         {
-<<<<<<< Updated upstream
+            isTurnPage = true;
             chosenFoodIndex++;
             if (chosenFoodIndex >= foodList.Count || chosenFoodIndex >= foodNumberUnlocked)
-=======
-            isTurnPage = true;
-            foodIndex++;
-            if (foodIndex >= foodList.Count)
->>>>>>> Stashed changes
             {
                 chosenFoodIndex = 0;
             }
@@ -71,15 +58,9 @@ public class FoodLauncher : MonoBehaviour
 
         else if (Input.mouseScrollDelta.y < 0)
         {
-<<<<<<< Updated upstream
+            isTurnPage = true;
             chosenFoodIndex--;
             if (chosenFoodIndex < 0)
-=======
-            
-            isTurnPage = true;
-            foodIndex--;
-            if (foodIndex < 0)
->>>>>>> Stashed changes
             {
                 chosenFoodIndex = foodList.Count - 1;
             }
