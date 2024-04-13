@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Food
+  - Bacon
+  - Fromage
+  - Jam
   layers:
   - Default
   - TransparentFX
