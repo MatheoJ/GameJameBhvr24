@@ -21,4 +21,8 @@ public class FoodProjectile : MonoBehaviour
         Debug.Log("Hit: " + collision.gameObject.tag);
         Destroy(gameObject);
     }
+    void OnTriggerEnter(UnityEngine.Collider other)
+    {
+        Destroy(gameObject);
+    }
 }
