@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WAZOManager : MonoBehaviour
 {
-    //private int currentID =0;
-    private Dictionary<int, WAZO> wazos = new();
 
     public List<WAZO> wazolist = new();
     public int alertRange = 5;
@@ -36,6 +34,11 @@ public class WAZOManager : MonoBehaviour
                 w.Alert();
             }
         }
+    }
+
+    public void Desinscirption(WAZO wazo)
+    {
+        wazolist.Remove(wazo);
     }
 
 }

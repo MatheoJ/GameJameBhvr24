@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class WAZO : MonoBehaviour
 {
     public float alertDuration = 10f;
-    public float alertTimer=0;
+    private float alertTimer=0;
     public int alertSpeedMultiplicator = 2;
 
     private NavMeshAgent agent;
@@ -19,12 +19,17 @@ public class WAZO : MonoBehaviour
 
     private WAZOManager manager;
 
+    public float startingSpeed=7;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         manager = FindAnyObjectByType<WAZOManager>();
         manager.Enregistrement(this);
+        agent.speed = startingSpeed;
+        agent.acceleration = startingSpeed*startingSpeed;
+        agent.angularSpeed = startingSpeed*100;
     }
 
     // Update is called once per frame
@@ -97,5 +102,10 @@ public class WAZO : MonoBehaviour
             agent.angularSpeed *= alertSpeedMultiplicator * alertSpeedMultiplicator;
             isAlerted = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        manager.Desinscirption(this);
     }
 }
