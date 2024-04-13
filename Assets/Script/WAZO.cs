@@ -3,25 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class deplacementPOULET : MonoBehaviour
+public class WAZO : MonoBehaviour
 {
+    public float alertDuration = 10f;
+    public float alertTimer=0;
+    public int alertSpeedMultiplicator = 2;
+
     private NavMeshAgent agent;
     public float maxTime=30.0f;
     public float minDistance = 1.0f;
     float timer = 0;
+    public float range = 10f;
 
-    public float range=10f;
+    public bool isAlerted=false;
+
+    private WAZOManager manager;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        manager = FindAnyObjectByType<WAZOManager>();
+        manager.Enregistrement(this);
     }
 
     // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
+        if (isAlerted)
+        {
+            alertTimer -= Time.deltaTime;
+            if(alertTimer <= 0 )
+            {
+                isAlerted = false;
+                agent.speed /= alertSpeedMultiplicator;
+                alertTimer = alertDuration;
+            }
+        }
+
         if(timer<0 || (transform.position - agent.destination).sqrMagnitude < minDistance * minDistance)
         {
             SetNewDestination();
@@ -47,9 +67,8 @@ public class deplacementPOULET : MonoBehaviour
         if (other.gameObject.tag == "Food")
         {
             SetNewDestination();
-            agent.speed += 5;
-            agent.acceleration += 25;
-            agent.angularSpeed += 25;
+            Alert();
+            manager.Hit(this);
         }
     }
 
@@ -67,5 +86,16 @@ public class deplacementPOULET : MonoBehaviour
         }
         result = Vector3.zero;
         return false;
+    }
+
+    public void Alert()
+    {
+        if(!isAlerted)
+        {
+            agent.speed *= alertSpeedMultiplicator;
+            agent.acceleration *= alertSpeedMultiplicator * alertSpeedMultiplicator;
+            agent.angularSpeed *= alertSpeedMultiplicator * alertSpeedMultiplicator;
+            isAlerted = true;
+        }
     }
 }

@@ -8,13 +8,16 @@ public class DebugNavMeshAgent : MonoBehaviour
     public bool velocity;
     public bool desiredVelocity;
     public bool path;
+    public bool alertRange;
 
     NavMeshAgent agent;
+    WAZO wazo;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        wazo= GetComponent<WAZO>();
     }
 
     // Update is called once per frame
@@ -43,6 +46,22 @@ public class DebugNavMeshAgent : MonoBehaviour
             }
             
         }
+        if (alertRange)
+        {
+            if (wazo.isAlerted)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawSphere(transform.position, 5);
+            }
+
+            else
+            {
+                Gizmos.color = Color.cyan;
+                Gizmos.DrawSphere(transform.position, 5);
+            }
+            
+        }
+
 
 
 
