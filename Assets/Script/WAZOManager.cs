@@ -7,6 +7,7 @@ public class WAZOManager : MonoBehaviour
 
     public List<WAZO> wazolist = new();
     public int alertRange = 5;
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,13 @@ public class WAZOManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        foreach (WAZO w in wazolist)
+        {
+            if (Vector3.Distance(player.position, w.transform.position) < alertRange)
+            {
+                w.Alert();
+            }
+        }
     }
 
     public void Enregistrement(WAZO wazo)
