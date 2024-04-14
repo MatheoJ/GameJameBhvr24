@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = 0;
-    public int waveNumber = 0;
+    public static int score = 0;
+    public static int waveNumber = 0;
     public FoodLauncher foodLauncher;
     public float timeLeftForGame = 180;
 
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         foodLauncher.foodNumberUnlocked = 0;
+        score = 0;
+        waveNumber = 0;
     }
 
     // Update is called once per frame

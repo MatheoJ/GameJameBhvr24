@@ -5,20 +5,23 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class StartManager : MonoBehaviour
+public class EndScript : MonoBehaviour
 {
 
     //Start button
-    public Button startButton;
-    public Button settingsButton;
-    public Button rulesButton;
+    public Button restartButton;
+    public Button menuButton;
+    public TextMeshProUGUI score;
+    public TextMeshProUGUI wave;  
+
 
     // Start is called before the first frame update
     void Start()
     {
-        startButton.onClick.AddListener(OnStartGame);
-        settingsButton.onClick.AddListener(OnSettings);
-        rulesButton.onClick.AddListener(OnRules);
+        restartButton.onClick.AddListener(OnStartGame);
+        menuButton.onClick.AddListener(OnMenu);
+        score.text = GameManager.score.ToString();
+        wave.text = GameManager.waveNumber.ToString();
     }
 
     // Update is called once per frame
@@ -33,12 +36,8 @@ public class StartManager : MonoBehaviour
     {
         SceneManager.LoadScene("PlayerControlTest");
     }
-    private void OnSettings()
+    private void OnMenu()
     {
-        SceneManager.LoadScene("Settings");
-    }
-    private void OnRules()
-    {
-        SceneManager.LoadScene("Rules");
+        SceneManager.LoadScene("StartScene");
     }
 }

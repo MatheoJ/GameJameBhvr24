@@ -117,7 +117,7 @@ public class WAZO : MonoBehaviour
         {
             manager.Hit(this);
             Destroy(this.gameObject);
-            
+            GameManager.score += 1;
         }
     }
 
