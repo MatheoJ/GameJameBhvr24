@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8587087892452204323}
   - component: {fileID: 1683117935188402011}
   - component: {fileID: 8454919628451185684}
-  - component: {fileID: -5357413267703685924}
+  - component: {fileID: 7470943873172865739}
   m_Layer: 0
-  m_Name: FromagePrefab
+  m_Name: FromagePrefab 1
   m_TagString: Fromage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &-5357413267703685924
+--- !u!82 &7470943873172865739
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

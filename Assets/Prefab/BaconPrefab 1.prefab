@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4155620550747261599}
   - component: {fileID: 6067516135855800816}
   - component: {fileID: 9193038559633336366}
-  - component: {fileID: 5378882751078991927}
+  - component: {fileID: 5034869877779171971}
   m_Layer: 0
-  m_Name: BaconPrefab
+  m_Name: BaconPrefab 1
   m_TagString: Bacon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &5378882751078991927
+--- !u!82 &5034869877779171971
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
