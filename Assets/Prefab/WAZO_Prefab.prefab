@@ -1,5 +1,116 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1121859932410553461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3773465046344491171}
+  - component: {fileID: 651113787420022098}
+  - component: {fileID: 8308627186723387605}
+  m_Layer: 0
+  m_Name: VFX_DeadBird
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3773465046344491171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121859932410553461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.760172, y: -5.832258, z: 2.0183897}
+  m_LocalScale: {x: 1, y: 1.6129034, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2541208085003418845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!2083052967 &651113787420022098
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121859932410553461}
+  m_Enabled: 1
+  m_Asset: {fileID: 8926484042661614526, guid: 00f94ae4b36146349b41f20dd70dbd0d, type: 3}
+  m_InitialEventName: OnPlay
+  m_InitialEventNameOverriden: 0
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array: []
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array: []
+    m_Vector4f:
+      m_Array: []
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array: []
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array: []
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array: []
+    m_Bool:
+      m_Array: []
+--- !u!73398921 &8308627186723387605
+VFXRenderer:
+  serializedVersion: 1
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121859932410553461}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3104689369284790819
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,10 +139,11 @@ Transform:
   m_GameObject: {fileID: 3104689369284790819}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.760172, y: 3.616, z: -2.0183897}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3773465046344491171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3546373350566629604
@@ -81,24 +193,25 @@ MonoBehaviour:
   Bacon: {fileID: 2100000, guid: 9bc25b782052153438576219de5d96b1, type: 2}
   Jam: {fileID: 2100000, guid: fd3772ffe7bb6cd4db4353198125ea7d, type: 2}
   Fromage: {fileID: 2100000, guid: 5fe3c8cd770fa054ba89b6f9e956a8be, type: 2}
-  PouletBackon: {fileID: 919132149155446097, guid: 50b37aab9d80d064db07c9d90f997197,
+  PouletBackon: {fileID: 4831785700059656844, guid: 379dc6e140c35734e87674fb175ef014,
     type: 3}
-  PouletJam: {fileID: 919132149155446097, guid: 461ab58cb617c0a478f0d78d9bb1b773,
+  PouletJam: {fileID: 6212094799532215883, guid: 6be2da97b0f920242af8b5a463c93a12,
     type: 3}
-  PouletFromage: {fileID: 919132149155446097, guid: d287a38770b9ba54a8e7aa811df0456c,
+  PouletFromage: {fileID: 390769344086866585, guid: f62a46e466be36c44827344f430b9093,
     type: 3}
-  PigeonBackon: {fileID: 919132149155446097, guid: 50b37aab9d80d064db07c9d90f997197,
+  PigeonBackon: {fileID: 190685338471759824, guid: a239b22cdf8e59b43bcf0a3acbc168cf,
     type: 3}
-  PigeonJam: {fileID: 919132149155446097, guid: 461ab58cb617c0a478f0d78d9bb1b773,
+  PigeonJam: {fileID: 8359858552601191608, guid: 0b01454a8ddb7b44ead1b3291f881325,
     type: 3}
-  PigeonFromage: {fileID: 919132149155446097, guid: d287a38770b9ba54a8e7aa811df0456c,
+  PigeonFromage: {fileID: 731347968344393740, guid: 707986c74443abc438b2ff4f07adf115,
     type: 3}
-  SeagleBackon: {fileID: 919132149155446097, guid: 7c3fb61b3d0877b458756608b95bfd69,
+  SeagleBackon: {fileID: 5007007195507694105, guid: e2b823c124940b94caf80e2a192a5d6a,
     type: 3}
-  SeagleJam: {fileID: 919132149155446097, guid: 6a477c6d4391b574db08ca8edf18fae4,
+  SeagleJam: {fileID: 8760437332558479291, guid: 369ed02ddd1709e449fe7b7a05db5ac0,
     type: 3}
-  SeagleFromage: {fileID: 919132149155446097, guid: 5ea0278a3668b5443a3c7c7a6fdd7aeb,
+  SeagleFromage: {fileID: 6528550766064768914, guid: aaf9c997f6c8c4f40b28149ab52cd526,
     type: 3}
+  DeathBirdVfx: {fileID: 1121859932410553461}
 --- !u!195 &7034188189645302932
 NavMeshAgent:
   m_ObjectHideFlags: 0

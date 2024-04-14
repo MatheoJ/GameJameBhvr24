@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &25938695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 684341529777480403, guid: 1960471f0deccda4bbb5423e2fcd9cf2,
+    type: 3}
+  m_PrefabInstance: {fileID: 383587721331576119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &36616950 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7399152291647622493, guid: 1960471f0deccda4bbb5423e2fcd9cf2,
@@ -457,6 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wazolist: []
   alertRange: 5
+  player: {fileID: 25938695}
 --- !u!4 &1339547348
 Transform:
   m_ObjectHideFlags: 0

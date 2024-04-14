@@ -49,6 +49,9 @@ public class WAZO : MonoBehaviour
     public GameObject SeagleJam;
     public GameObject SeagleFromage;
 
+    //VFX
+    public GameObject DeathBirdVfx;
+
 
 
     // Start is called before the first frame update
@@ -100,6 +103,10 @@ public class WAZO : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject vfxInstance = Instantiate(DeathBirdVfx, transform.position, Quaternion.identity);
+        // Destroy the VFX after 2 seconds
+        Destroy(vfxInstance, 2.0f);
+
         if (!other.gameObject.CompareTag(ConvertEnum(wazoType)))
         {
             SetNewDestination();
@@ -138,6 +145,7 @@ public class WAZO : MonoBehaviour
             agent.acceleration *= alertSpeedMultiplicator * alertSpeedMultiplicator;
             agent.angularSpeed *= alertSpeedMultiplicator * alertSpeedMultiplicator;
             isAlerted = true;
+
         }
         alertTimer = alertDuration;
 

@@ -238,12 +238,11 @@ MonoBehaviour:
   foodPrefab: {fileID: 1990583758134529056, guid: ca0761dc58ce7a4469a2b59e2c72f192,
     type: 3}
   foodList:
-  - {fileID: 1990583758134529056, guid: 563454176a25e984797d003963bf48c0, type: 3}
-  - {fileID: 1990583758134529056, guid: 51ebbb58d0782bd4fa6cb72fe9149a7f, type: 3}
-  - {fileID: 1990583758134529056, guid: ca0761dc58ce7a4469a2b59e2c72f192, type: 3}
+  - {fileID: 2824092566331986902, guid: 124fb00b3fefbd1438eba4c89cb28617, type: 3}
+  - {fileID: 5181393778120102647, guid: e7cebef6aeb4de84785f774888863bae, type: 3}
+  - {fileID: 143750311533380843, guid: 3f899cff254c072469e149e8e7d2f07a, type: 3}
   foodSpeed: 30
   foodNumberUnlocked: 2
-  animatorhand: {fileID: 0}
 --- !u!1 &8704533980398014780
 GameObject:
   m_ObjectHideFlags: 0
