@@ -21,8 +21,8 @@ public class HUDManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + gameManager.score;
-        wave.text = "Wave: " + gameManager.waveNumber;
+        score.text = "Score: " + GameManager.score;
+        wave.text = "Wave: " + GameManager.waveNumber;
         birdLeft.text = "Birds left: " + gameManager.remainingBirdNumberInCurrentWave+"/"+gameManager.birdNumberInCurrentWave;
         timeLeft.text = "Time left: " + ConvertTime(gameManager.timeLeftForGame);
     }
