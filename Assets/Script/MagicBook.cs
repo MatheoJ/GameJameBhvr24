@@ -15,17 +15,28 @@ public class MagicBook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool isMagicBook = animator.GetBool("isMagicBook");
+        bool isPageRight = animator.GetBool("isPageRight");
         float mouseScroll = Input.mouseScrollDelta.y;
+        bool isPageLeft = animator.GetBool("isPageLeft");
 
-        if (!isMagicBook && mouseScroll != 0)
+        if (!isPageRight && mouseScroll > 0)
         {
-            animator.SetBool("isMagicBook", true);
+            animator.SetBool("isPageRight", true);
         }
 
-        if (isMagicBook && mouseScroll == 0)
+        if (isPageRight && mouseScroll == 0)
         {
-            animator.SetBool("isMagicBook", false);
+            animator.SetBool("isPageRight", false);
+        }
+
+        if (!isPageLeft && mouseScroll < 0)
+        {
+            animator.SetBool("isPageLeft", true);
+        }
+
+        if (isPageLeft && mouseScroll == 0)
+        {
+            animator.SetBool("isPageLeft", false);
         }
     }
 }
