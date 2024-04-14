@@ -52,6 +52,8 @@ public class WAZO : MonoBehaviour
     //VFX
     public GameObject DeathBirdVfx;
 
+    public Animator animator;
+
 
 
     // Start is called before the first frame update
@@ -78,6 +80,18 @@ public class WAZO : MonoBehaviour
                 isAlerted = false;
                 agent.speed /= alertSpeedMultiplicator;
                 alertTimer = alertDuration;
+            }
+
+            if (animator != null)
+            {
+                animator.speed = 4;
+            }
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.speed = 1;
             }
         }
 
@@ -224,6 +238,10 @@ public class WAZO : MonoBehaviour
                     Instantiate(SeagleFromage, transform);
                 }
                 break;
+            
+            // Get animator in children
+            
         }
+        animator = GetComponentInChildren<Animator>();
     }
 }
