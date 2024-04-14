@@ -10,13 +10,15 @@ public class StartManager : MonoBehaviour
 
     //Start button
     public Button startButton;
-    public Button creditsButton;
+    public Button settingsButton;
+    public Button rulesButton;
 
     // Start is called before the first frame update
     void Start()
     {
         startButton.onClick.AddListener(OnStartGame);
-        creditsButton.onClick.AddListener(OnCredits);
+        settingsButton.onClick.AddListener(OnSettings);
+        rulesButton.onClick.AddListener(OnRules);
     }
 
     // Update is called once per frame
@@ -31,8 +33,12 @@ public class StartManager : MonoBehaviour
     {
         SceneManager.LoadScene("PlayerControlTest");
     }
-    private void OnCredits()
+    private void OnSettings()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Settings");
+    }
+    private void OnRules()
+    {
+        SceneManager.LoadScene("Rules");
     }
 }

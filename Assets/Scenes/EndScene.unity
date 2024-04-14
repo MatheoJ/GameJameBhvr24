@@ -578,7 +578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b6e44abedca10847b4a760f7b337c34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c893c525aac8fb4db637abaff386765, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,7 +631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 88.549995, y: -74}
+  m_AnchoredPosition: {x: 115, y: -74}
   m_SizeDelta: {x: -622.89996, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375413155
@@ -865,7 +865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 1057079121}
-  creditsButton: {fileID: 1375413155}
+  settingsButton: {fileID: 0}
+  rulesButton: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
