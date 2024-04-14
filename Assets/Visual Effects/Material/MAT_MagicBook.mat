@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2690393003828562713
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_TrailsBacon
-  m_Shader: {fileID: -6465566751694194690, guid: 9356cec326eca2d4eaf56669c908ab80,
+  m_Name: MAT_MagicBook
+  m_Shader: {fileID: -6465566751694194690, guid: dde4f2dfcbae28d43acf0b6432cecde8,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,8 +24,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_bca6685a225b4aea97cac51f6198212e_Texture_1_Texture2D:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+    - _SampleTexture2D_5ec1c625e2f041cfa4cdb34825e88f93_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4edb7fdfc21af2148ae8f60b27949b5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 8acad84be48df574f9db9b511d459c16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -55,15 +46,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Noise_Speed: 0.6
+    - _Noise_Scale: 52.53
+    - _Noise_Speed: 0.2
+    - _Power: 2.8
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0
     m_Colors:
-    - _Color_01: {r: 0.5019608, g: 0.23697329, b: 0.2235294, a: 0}
-    - _Color_02: {r: 0.5622641, g: 0.4354935, b: 0.3638803, a: 0}
-    - _Noise_Speed: {r: 2, g: 0, b: 0, a: 0}
-    - _Scroll_Speed: {r: 0.01, g: 0, b: 0, a: 0}
-    - _Speed_Scroll: {r: 1, g: 0, b: 0, a: 0}
-    - _Vector2: {r: 0.1, g: 1, b: 0, a: 0}
+    - _Color: {r: 0.32987785, g: 0, b: 3.1155608, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &3605855011206412721
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

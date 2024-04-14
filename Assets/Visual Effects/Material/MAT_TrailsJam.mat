@@ -62,7 +62,7 @@ Material:
     m_Colors:
     - _Color_01: {r: 0.4276905, g: 0.22253467, b: 0.5018867, a: 0}
     - _Color_02: {r: 0.73003054, g: 0.44067636, b: 0.78113204, a: 0}
-    - _Noise_Speed: {r: 0.2, g: 0, b: 0, a: 0}
+    - _Noise_Speed: {r: 2, g: 0, b: 0, a: 0}
     - _Scroll_Speed: {r: 0.01, g: 0, b: 0, a: 0}
     - _Speed_Scroll: {r: 1, g: 0, b: 0, a: 0}
     - _Vector2: {r: 0.1, g: 1, b: 0, a: 0}
