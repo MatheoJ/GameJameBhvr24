@@ -481,7 +481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -76.57503, y: -19}
+  m_AnchoredPosition: {x: -176, y: -57}
   m_SizeDelta: {x: -651.13, y: 41.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057079121
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fe1c70f9883eecd42b893a07d2f079de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49d44fb08151e25488517d3272528810, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -74.22499, y: -89}
+  m_AnchoredPosition: {x: 36, y: -50}
   m_SizeDelta: {x: -657.35, y: 94.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375413155
@@ -875,13 +875,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1952448999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5f34e33d3e8a543a831f811fddf8c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d7f1855f36c83d41926891b0b473105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartButton: {fileID: 1057079121}
-  menuButton: {fileID: 1375413155}
-  score: {fileID: 0}
-  wave: {fileID: 0}
+  startButton: {fileID: 1375413155}
+  creditsButton: {fileID: 1057079121}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -12,6 +12,14 @@ public class FoodLauncher : MonoBehaviour
 
     // jai ajouter la
     public FoodLauncherSound launcherSound;
+    public GameObject PageBacon;
+    public GameObject PageCheese;
+    public GameObject PageJam;
+
+    public GameObject PentaBacon;
+    public GameObject PentaCheese;
+    public GameObject PentaJam;
+
 
     private int chosenFoodIndex = 0;
 
@@ -26,6 +34,23 @@ public class FoodLauncher : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
 
             launcherSound.PlayLaunchSound();           
+            //Set active the pentagon of the chosen food for 0.5 seconds
+            if (chosenFoodIndex == 0)
+            {
+                PentaBacon.SetActive(true);
+                Invoke("DeactivatePentaBacon", 0.3f);
+            }
+            else if (chosenFoodIndex == 1)
+            {
+                PentaJam.SetActive(true);
+                Invoke("DeactivatePentaJam", 0.3f);
+            }
+            else if (chosenFoodIndex == 2)
+            {
+                PentaCheese.SetActive(true);
+                Invoke("DeactivatePentaCheese", 0.3f);
+            }
+
         }
 
 
@@ -70,5 +95,38 @@ public class FoodLauncher : MonoBehaviour
             chosenFoodIndex = 2;
         } 
 
+        if (chosenFoodIndex == 0)
+        {
+            PageBacon.SetActive(true);
+            PageCheese.SetActive(false);
+            PageJam.SetActive(false);
+        }
+        else if (chosenFoodIndex == 1)
+        {
+            PageBacon.SetActive(false);
+            PageCheese.SetActive(false);
+            PageJam.SetActive(true);
+        }
+        else if (chosenFoodIndex == 2)
+        {
+            PageBacon.SetActive(false);
+            PageCheese.SetActive(true);
+            PageJam.SetActive(false);
+        }
+    }
+
+    void DeactivatePentaBacon()
+    {
+        PentaBacon.SetActive(false);
+    }
+
+    void DeactivatePentaJam()
+    {
+        PentaJam.SetActive(false);
+    }
+
+    void DeactivatePentaCheese()
+    {
+        PentaCheese.SetActive(false);
     }
 }

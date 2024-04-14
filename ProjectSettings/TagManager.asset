@@ -8,6 +8,7 @@ TagManager:
   - Bacon
   - Fromage
   - Jam
+  - wazo
   layers:
   - Default
   - TransparentFX
