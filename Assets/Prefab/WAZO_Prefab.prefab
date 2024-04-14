@@ -216,6 +216,7 @@ MonoBehaviour:
   SeagleFromage: {fileID: 6528550766064768914, guid: aaf9c997f6c8c4f40b28149ab52cd526,
     type: 3}
   DeathBirdVfx: {fileID: 1121859932410553461}
+  animator: {fileID: 0}
 --- !u!195 &7034188189645302932
 NavMeshAgent:
   m_ObjectHideFlags: 0

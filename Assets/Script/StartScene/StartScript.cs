@@ -31,14 +31,14 @@ public class StartManager : MonoBehaviour
     // This method is called when the start button is clicked
     private void OnStartGame()
     {
-        SceneManager.LoadScene("PlayerControlTest");
+        SceneManager.LoadScene("FinalMainScene");
     }
     private void OnSettings()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("SettingsScene");
     }
     private void OnRules()
     {
-        SceneManager.LoadScene("Rules");
+        SceneManager.LoadScene("howtoplayScene");
     }
 }

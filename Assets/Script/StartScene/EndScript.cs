@@ -22,6 +22,8 @@ public class EndScript : MonoBehaviour
         menuButton.onClick.AddListener(OnMenu);
         score.text = GameManager.score.ToString();
         wave.text = GameManager.waveNumber.ToString();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -34,7 +36,7 @@ public class EndScript : MonoBehaviour
     // This method is called when the start button is clicked
     private void OnStartGame()
     {
-        SceneManager.LoadScene("PlayerControlTest");
+        SceneManager.LoadScene("FinalMainScene");
     }
     private void OnMenu()
     {

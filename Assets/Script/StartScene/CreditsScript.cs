@@ -27,7 +27,7 @@ public class CreditsScript : MonoBehaviour
     // This method is called when the start button is clicked
     private void OnStartGame()
     {
-        SceneManager.LoadScene("PlayerControlTest");
+        SceneManager.LoadScene("StartScene");
     }
 
 }

@@ -29,7 +29,8 @@ public class SettingsScript : MonoBehaviour
     // This method is called when the start button is clicked
     private void OnStartGame()
     {
-        SceneManager.LoadScene("PlayerControlTest");
+        Application.Quit();
+        //SceneManager.LoadScene("StartScene");
     }
     private void OnCredits()
     {

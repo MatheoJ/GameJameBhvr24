@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-       // Debug.Log("Game Over");
+        // Debug.Log("Game Over");
+        SceneManager.LoadScene("EndScene");
     }
 }
