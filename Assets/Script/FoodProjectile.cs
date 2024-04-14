@@ -31,7 +31,7 @@ public class FoodProjectile : MonoBehaviour
     {
         if (other.gameObject.tag == "Untagged")
         {
-            //PlayImpactEffect();
+            PlayImpactEffect();
         }
 
         Debug.Log("Hit: " + other.gameObject.tag);
