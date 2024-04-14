@@ -8,65 +8,55 @@ public class FoodLauncher : MonoBehaviour
     public GameObject foodPrefab;
     public List<GameObject> foodList;
     public float foodSpeed = 10;
-    public int foodNumberUnlocked = 2;
+    public int foodNumberUnlocked = 1;
 
-    public Animator animatorhand;
-    private bool isClick = false;
-    private bool isTurnPage = false;
 
     private int chosenFoodIndex = 0;
 
-    void start()
+    void Start()
     {
-        animatorhand = GetComponent<Animator>();
+        //animatorhand = GetComponent<Animator>();
     }
 
     void Update()
     {
-        animatorhand.SetBool("isClick", isClick);
-        animatorhand.SetBool("isTurnPage", isTurnPage);
 
         //if mouse down
         if (Input.GetMouseButtonDown(0))
         {
             var bullet = Instantiate(foodList[chosenFoodIndex], foodSpawnPoint.position + foodSpawnPoint.forward*2, foodSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
-            isClick = true;
-
         }
         else
         {
-            isClick = false;
         }
 
 
         //if mouse wheel is scrolled
         if (Input.mouseScrollDelta.y > 0)
         {
-            isTurnPage = true;
             chosenFoodIndex++;
-            if (chosenFoodIndex >= foodList.Count || chosenFoodIndex >= foodNumberUnlocked)
+            
+            if (chosenFoodIndex >= foodList.Count || chosenFoodIndex+1 > foodNumberUnlocked)
             {
                 chosenFoodIndex = 0;
             }
             else
             {
-                isTurnPage = false;
             }
         }
 
 
         else if (Input.mouseScrollDelta.y < 0)
         {
-            isTurnPage = true;
             chosenFoodIndex--;
+            
             if (chosenFoodIndex < 0)
             {
-                chosenFoodIndex = foodList.Count - 1;
+                chosenFoodIndex = Mathf.Min(foodNumberUnlocked, foodList.Count)-1;
             }
             else
             {
-                isTurnPage = false;
             }
         }
 
@@ -75,9 +65,13 @@ public class FoodLauncher : MonoBehaviour
         {
             chosenFoodIndex = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && foodNumberUnlocked>=2)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && foodNumberUnlocked>1)
         {
             chosenFoodIndex = 1;
-        }
+        } else if (Input.GetKeyDown(KeyCode.Alpha3) && foodNumberUnlocked>2)
+        {
+            chosenFoodIndex = 2;
+        } 
+
     }
 }

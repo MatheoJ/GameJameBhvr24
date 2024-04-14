@@ -47,12 +47,19 @@ public class BirdWave : MonoBehaviour
 
     public void StartWave()
     {
+        Debug.Log("StartWave : " + FoodNumber);
         for (int i = 0; i < BirdNumber; i++)
         {
             //Instantiate a bird and add it to the list
             float range = 10f;
             RandomPoint(new Vector3(Random.Range(-24, 24), 0, Random.Range(-24, 24)), range, out Vector3 result);
             GameObject bird = Instantiate(BirdPrefabList[Random.Range(0, BirdPrefabList.Count)], result, Quaternion.identity);
+            //Chose randomly the type of the bird
+            int rangeType = Mathf.Min(FoodNumber, 3);
+            bird.GetComponent<WAZO>().wazoType = (WazoType)Random.Range(0, rangeType);
+            bird.GetComponent<WAZO>().wazoRace = (WazoRace)Random.Range(0, 3);
+            bird.GetComponent<WAZO>().SetColor();
+
             BirdList.Add(bird);
         }
         BirdLeft = BirdNumber;
