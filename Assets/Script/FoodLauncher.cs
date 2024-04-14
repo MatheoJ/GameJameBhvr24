@@ -10,8 +10,7 @@ public class FoodLauncher : MonoBehaviour
     public float foodSpeed = 10;
     public int foodNumberUnlocked = 1;
 
-    // jai ajouter la
-    public FoodLauncherSound launcherSound;
+    
     public GameObject PageBacon;
     public GameObject PageCheese;
     public GameObject PageJam;
@@ -32,8 +31,7 @@ public class FoodLauncher : MonoBehaviour
         {
             var bullet = Instantiate(foodList[chosenFoodIndex], foodSpawnPoint.position + foodSpawnPoint.forward*2, foodSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
-
-            launcherSound.PlayLaunchSound();           
+    
             //Set active the pentagon of the chosen food for 0.5 seconds
             if (chosenFoodIndex == 0)
             {
