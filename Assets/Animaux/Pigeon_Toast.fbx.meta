@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 1d00e1d281d78994090b65a3eabf42fa
+guid: 484dd6502fba3ef478334dc105a1db91
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DefaultHDMaterial
+    second: {fileID: 2100000, guid: 468cba05bcf204642a21e47df2a3bd7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: d599705b55be2a64e9e70ea9036db24d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 468cba05bcf204642a21e47df2a3bd7b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,18 +48,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: TurnPage
+      name: Take 001
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

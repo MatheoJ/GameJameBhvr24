@@ -13,10 +13,6 @@ public class FoodLauncher : MonoBehaviour
 
     private int chosenFoodIndex = 0;
 
-    void Start()
-    {
-        //animatorhand = GetComponent<Animator>();
-    }
 
     void Update()
     {
@@ -26,9 +22,6 @@ public class FoodLauncher : MonoBehaviour
         {
             var bullet = Instantiate(foodList[chosenFoodIndex], foodSpawnPoint.position + foodSpawnPoint.forward*2, foodSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = foodSpawnPoint.forward * foodSpeed;
-        }
-        else
-        {
         }
 
 

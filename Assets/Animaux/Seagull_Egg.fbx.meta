@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 1d00e1d281d78994090b65a3eabf42fa
+guid: 4e403368a09772145bcec7940804cef0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Food6
+    second: {fileID: 2100000, guid: bf86af53efed53743849face8ce7ef35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert10
+    second: {fileID: 2100000, guid: 4376428605fcfb449962e52c2538abd0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,18 +43,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: TurnPage
+      name: Take 001
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
