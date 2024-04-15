@@ -63,6 +63,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken_Pizza
       objectReference: {fileID: 0}
+    - target: {fileID: 2292925770311509027, guid: ade9d9593071a344cba0cb5f4e2ffa65,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292925770311509027, guid: ade9d9593071a344cba0cb5f4e2ffa65,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47436295a4d46ea47abf7fce33e96750, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
