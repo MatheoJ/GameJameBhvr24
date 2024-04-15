@@ -24,7 +24,7 @@ public class HUDManager : MonoBehaviour
         score.text = "Score: " + GameManager.score;
         wave.text = "Wave: " + GameManager.waveNumber;
         birdLeft.text = "Birds left: " + gameManager.remainingBirdNumberInCurrentWave+"/"+gameManager.birdNumberInCurrentWave;
-        timeLeft.text = "Time left: " + ConvertTime(gameManager.timeLeftForGame);
+        timeLeft.text = ConvertTime(gameManager.timeLeftForGame);
     }
 
     string ConvertTime(float time)
