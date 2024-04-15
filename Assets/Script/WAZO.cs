@@ -84,14 +84,14 @@ public class WAZO : MonoBehaviour
 
             if (animator != null)
             {
-                animator.speed = 4;
+                animator.speed = 3;
             }
         }
         else
         {
             if (animator != null)
             {
-                animator.speed = 1;
+                animator.speed = .5f;
             }
         }
 
