@@ -11,6 +11,7 @@ public class FPSController : MonoBehaviour
     public float jumpPower = 7f;
     public float gravity = 10f;
 
+    public PauseMenu pauseMenu;
 
     public float lookSpeed = 2f;
     public float lookXLimit = 60f;
@@ -35,6 +36,13 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
+
+        if (pauseMenu != null && pauseMenu.isPaused)
+        {
+            return;
+        }
+
+
 
         #region Handles Movment
         Vector3 forward = transform.TransformDirection(Vector3.forward);

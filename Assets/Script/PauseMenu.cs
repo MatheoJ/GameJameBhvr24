@@ -10,12 +10,16 @@ public class PauseMenu : MonoBehaviour
     Canvas canvas;
     public Button resume;
     public Button mainMenu;
+    public Button quit;
+
+    public bool isPaused = false;
     // Start is called before the first frame update
     void Start()
     {
         canvas = GetComponent<Canvas>();
         resume.onClick.AddListener(Resume);
         mainMenu.onClick.AddListener(Menu);
+        quit.onClick.AddListener(Application.Quit);
     }
 
     // Update is called once per frame
@@ -31,12 +35,14 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0.0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            isPaused = true;
         }
         else
         {
             Time.timeScale = 1.0f;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            isPaused = false;
         }
 
     }

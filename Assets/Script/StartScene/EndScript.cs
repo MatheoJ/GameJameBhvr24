@@ -11,6 +11,7 @@ public class EndScript : MonoBehaviour
     //Start button
     public Button restartButton;
     public Button menuButton;
+    public Button exitButton;
     public TextMeshProUGUI score;
     public TextMeshProUGUI wave;  
 
@@ -20,6 +21,7 @@ public class EndScript : MonoBehaviour
     {
         restartButton.onClick.AddListener(OnStartGame);
         menuButton.onClick.AddListener(OnMenu);
+        exitButton.onClick.AddListener(Application.Quit);
         score.text = GameManager.score.ToString();
         wave.text = GameManager.waveNumber.ToString();
         Cursor.lockState = CursorLockMode.None;
